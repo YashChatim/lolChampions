@@ -20,8 +20,8 @@ import Champion from './components/Champion.vue';
 export default {
   name: 'App',
   components: {
-    Champion
-  }
+    Champion,
+  },
 }
 </script>
 
