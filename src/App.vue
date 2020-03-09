@@ -1,5 +1,5 @@
 <template>
-  <div class="all-champion-container">
+  <div class="champion-container">
     <Champion name="AATROX" description="THE DARKIN BLADE" />
     <Champion name="AHRI" description="THE NINE-TAILED FOX" />
     <Champion name="AKALI" description="THE ROGUE ASSASSIN" />
@@ -30,7 +30,7 @@ body {
   background-color: lightgray;
 }
 
-.all-champion-container {
+.champion-container {
   text-align: center;
   color: #2c3e50;
 }

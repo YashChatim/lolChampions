@@ -1,6 +1,5 @@
 <template>
-    <div class="champion-container">
-        
+    <div class="champion" :class="name.toLowerCase()">
         <a href="#" v-on:click="showAbility = !showAbility, displayChampionAbility()"><h1>{{ name }}</h1></a>
         <p>{{ description }}</p>
         <Ability v-show="showAbility" :passive="passive" :Q="abilityQ" :W="abilityW" :E="abilityE" :R="abilityR" />
@@ -51,7 +50,7 @@ export default {
 </script>
 
 <style>
-    .champion-container {
+    .champion {
         background-color: gray;
     }
 </style>
