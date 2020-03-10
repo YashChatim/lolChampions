@@ -1,6 +1,6 @@
 <template>
     <div class="champion" :class="name.toLowerCase()">
-        <a href="#" v-on:click="showAbility = !showAbility, displayChampionAbility()"><h1>{{ name }}</h1></a>
+        <a v-on:click="showAbility = !showAbility, displayChampionAbility()"><h1>{{ name }}</h1></a>
         <p>{{ description }}</p>
         <Ability v-show="showAbility" :passive="passive" :Q="abilityQ" :W="abilityW" :E="abilityE" :R="abilityR" />
     </div>
@@ -14,6 +14,7 @@ export default {
     data() {
     return {
       showAbility: false,
+      image: "",
       passive: "",
       abilityQ: "",
       abilityW: "",
@@ -49,8 +50,20 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .champion {
         background-color: gray;
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 0;
     }
 </style>
